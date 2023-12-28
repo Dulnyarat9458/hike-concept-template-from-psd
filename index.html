@@ -1,11 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style.css">
     <title>hike-concept-template</title>
 </head>
+
 <body>
-    
+    <nav>
+        <div class="nav-panel">
+            <div class="nav-panel-primary">
+                <span onclick="openSidebar()"><img src="/assets/images/bar.svg" width="24px" alt="menu" class="special-icon"></span>
+                <img src="/assets/images/logo.svg" width="220px" alt="logo">
+                <span  onclick="openSearch()""><img src="/assets/images/search.svg" width="24px" alt="search" class="special-icon"></span>
+            </div>
+            <div class="nav-panel-secondary">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Package</li>
+                    <li>Contacts</li>
+                </ul>
+                <div>
+                    <input type="text" placeholder="search">
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div id="sidebar">
+        <br>
+        <button onclick="closeSidebar()">Close</button>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/">About</a></li>
+            <li><a href="/">Package</a></li>
+            <li><a href="/">Contacts</a></li>
+        </ul>
+    </div>
+    <div id="search-bar">
+        <form action="/">
+            <input type="text" placeholder="search">
+            <input type="submit" value="submit">
+            <button onclick="closeSearch()">Close</button>
+        </form>
+    </div>
+    <div id="backdrop-panel" onclick="closeSidebar()"></div>
+    <section id="intro-section">
+        <div class="container">
+            <div class="flex-wrapper">
+                <div class="flex-item-50">content1</div>
+                <div class="flex-item-50">content2</div>
+            </div>
+        </div>
+    </section>
+    <script src="scripts/script.js"></script>
 </body>
+
 </html>
