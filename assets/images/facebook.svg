@@ -1,0 +1,15 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124 30" width="124" height="30">
+	<title>your_account</title>
+	<defs>
+		<image  width="28" height="30" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAeCAMAAAAIG46tAAAAAXNSR0IB2cksfwAAAadQTFRF////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8jUNHwAAAI10Uk5TAARBldb9/+y+dSNx578vMM/eeEkxJyg7VKCRU9xgJo+4CUih6MkdFumspAEc+1ln6zLH5RpQ9O0S9STQdk3YOaeiE+6SYym2LuEHQL0IAn32A7vw6hebxvoOOLCtq4x8urSyNbfaPqgVNkJhxXTEN8IqIhnAhXdyy/lcGJ1zRQ8gXmvBjnqjtRGAlp+ePT2lSQAAAZJJREFUeJxtk/dbE0EQhof2AtJDERFBegmRpoAoVVogoYNSjHQboYlgUEBUQMofzSW3m7vkYX64+b5592Zn954TURETGxefAIlJyQ8kOlJSCUdaegTKyIQsR3ZObt7D/EcGLrCxx1D4JOyKiuFpiXalUBZjb1RaToWSlVAcNUFVNTWmyqTWKjudoVTn4lkw19OgSWNTc2rz85B8QUtwaSuxirW9DB6k3TSveC3SQad+sQtaunt6VRfeiPTRr+EADFq7NzAkbhqVGx4Bj9c7qmwBY8L4hHKT4+Camp5RtoNZ4a3u88682Tll51kQFjVMeQ9u3wenPhdLwrJ1L7BiDbTKmrBus3gsuMFHgU/afo6A/fRJEl/uh5N8FYex4F4YnNu4Fm3nYTPM/GwZTw8+5bdhR7OJBLqMtAsZZmF4b++bhrXsh/J3ptskKg6gzlQ7uIsi2SHka/2DwJEN/fwFx5Zdg/2TU1P/9rvgzN7nTwACf/8dnF/EGx9mMy9yl6pjt/4bLk+ixxP5f3R1fXPr849YpTsK/DvtJ//VUAAAAABJRU5ErkJggg=="/>
+	</defs>
+	<style>
+		tspan { white-space:pre } 
+		.t0 { font-size: 13px;fill: #ffffff;font-weight: 700;font-family: "Montserrat-Bold", "Montserrat" } 
+	</style>
+	<use id="Facebook Icon (Double Click to Edit)" href="#img1" x="0" y="0"/>
+	<text id="your_account" style="transform: matrix(1,0,0,1,35.643,19.42)" >
+		<tspan x="0" y="0" class="t0">your_account
+</tspan>
+	</text>
+</svg>
