@@ -1,10 +1,14 @@
 $accent-color: #ffae47;
+$accent-secondary-color: #dd224b;
 $primary-color: #2c2e35;
 $secondary-color: #ffffff;
 $tertiary-color: #e0e0e0;
 
+$primary-font: "Montserrat", sans-serif;
+
 body {
     margin: 0;
+    font-family: $primary-font;
 }
 
 nav {
@@ -22,11 +26,24 @@ section {
     align-items: center;
 }
 
-footer{
+footer {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 385px;
+}
+
+input {
+    font-family: $primary-font;
+    border: 0;
+    outline: 0;
+    &:focus {
+        outline: none !important;
+    }
+}
+
+a {
+    text-decoration: none;
 }
 
 #sidebar {
@@ -34,23 +51,47 @@ footer{
     position: fixed;
     top: 0;
     left: 0;
-    display: none;
-    width: 100%;
+    display: block;
+    width: 0%;
     height: 100%;
     max-width: 200px;
-    background-color: gray;
+    background-color: $primary-color;
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: 0.3s;
+    .sidebar-panel {
+        padding: 0px 16px 0px 16px;
+    }
+    ul {
+        padding-inline-start: 0px;
+        list-style: none;
+        li {
+            margin-bottom: 24px;
+            a {
+                text-decoration: none;
+            }
+            &:not(:last-child) {
+                margin-right: 16px;
+            }
+        }
+    }
 }
 
 #search-bar {
-    display: none;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     z-index: 40;
     position: fixed;
     top: 0;
     left: 0;
-    background-color: orange;
+    background-color: $primary-color;
     width: 100%;
     height: 100%;
     max-height: 200px;
+    overflow: hidden;
+    transition: .2s;
 }
 
 #backdrop-panel {
@@ -61,13 +102,14 @@ footer{
     height: 100vh;
     background-color: black;
     opacity: 0.75;
+    transition: 0.3s;
 }
 
 #intro-section {
     background-image: url("/assets/images/sc_bg_01.webp");
     background-repeat: no-repeat;
     background-position: bottom;
-    height: 1020px;
+    height: 1010px;
 }
 
 #about-section {
@@ -91,13 +133,13 @@ footer{
     height: 900px;
 }
 
-#journey-section{
+#journey-section {
     background-repeat: no-repeat;
     background-position: bottom;
     height: 600px;
 }
 
-#promotion-section{
+#promotion-section {
     background-image: url("/assets/images/sc_bg_04.webp");
     background-repeat: no-repeat;
     background-position: bottom;
@@ -111,15 +153,14 @@ footer{
     height: 800px;
 }
 
-#gallery-section{
+#gallery-section {
     background-image: url("/assets/images/sc_bg_06.webp");
     background-repeat: no-repeat;
     background-position: bottom;
     height: 900px;
 }
 
-
-#contact-section{
+#contact-section {
     background-color: $primary-color;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -127,18 +168,27 @@ footer{
 }
 
 .nav-panel {
-    width: calc(100% - 32px);
-    padding: 30px 16px 30px 16px;
-    background-color: gray;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0px 16px 0px 16px;
+    background-color: transparent;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: 0.3s;
     .nav-panel-primary {
         width: 100%;
+        height: 66px;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        overflow-y: hidden;
+        transition: 0.3s;
+        box-sizing: border-box;
+        img {
+            overflow: hidden;
+        }
     }
     .nav-panel-secondary {
         display: none;
@@ -147,17 +197,25 @@ footer{
         padding: 16px 0px 16px 0px;
         justify-content: space-between;
         flex-direction: row;
+        transition: 0.3s;
+        box-sizing: border-box;
         ul {
             padding-inline-start: 0px;
             li {
                 display: inline-block;
                 list-style: none;
-            }
-            li:not(:last-child) {
-                margin-right: 16px;
+                &:not(:last-child) {
+                    margin-right: 16px;
+                }
             }
         }
     }
+}
+
+.nav-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .primary-color-font {
@@ -166,6 +224,16 @@ footer{
 
 .secondary-color-font {
     color: $secondary-color;
+}
+
+.accent-color-bg {
+    background-color: $accent-color;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .flex-wrapper {
@@ -179,11 +247,11 @@ footer{
     width: 100%;
     margin-right: auto;
     margin-left: auto;
-    padding:  0px 15px;
+    padding: 0px 15px;
     box-sizing: border-box;
 }
 
-.input-control{
+.input-control {
     width: 100%;
 }
 
@@ -193,6 +261,61 @@ footer{
 
 .box {
     border: 2px solid $accent-color;
+}
+
+.search-input {
+    text-align: center;
+    padding: 0 38px 0 38px;
+    height: 38px;
+    font-size: 16px;
+    border-radius: 20px;
+    box-sizing: border-box;
+
+    &.nav-search-input {
+        max-width: 240px;
+    }
+    &.route-search-input {
+        color: $secondary-color;
+        width: 100%;
+        max-width: 450px;
+        &::placeholder {
+            color: $secondary-color;
+        }
+    }
+}
+
+.form-group {
+    width: 100%;
+    position: relative;
+    .search-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        left: 24px;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.negative-btn {
+    color: white;
+    background-color: $accent-secondary-color;
+    border: 0;
+    outline: 0;
+    padding: 8px 16px;
+    border-radius: 25px;
+    &.rounded-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        width: 35px;
+        aspect-ratio: 1 / 1;
+    }
+    &:focus {
+        outline: none !important;
+    }
 }
 
 @media (min-width: 576px) {
@@ -210,6 +333,7 @@ footer{
 @media (min-width: 992px) {
     nav {
         .nav-panel {
+            background-color: transparent;
             .nav-panel-secondary {
                 display: flex;
             }
