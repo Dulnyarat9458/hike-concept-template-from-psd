@@ -16,6 +16,7 @@ section {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  background-size: cover;
 }
 
 footer {
@@ -100,11 +101,12 @@ a {
 #intro-section {
   background-image: url("../assets/images/sc_bg_01.webp");
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position: top;
   height: 1010px;
 }
 
 #about-section {
+  background-color: #ffae47;
   background-repeat: no-repeat;
   background-position: bottom;
   height: 500px;
@@ -197,11 +199,30 @@ a {
   padding-inline-start: 0px;
 }
 .nav-panel .nav-panel-secondary ul li {
+  font-weight: 500;
   display: inline-block;
   list-style: none;
 }
 .nav-panel .nav-panel-secondary ul li:not(:last-child) {
   margin-right: 16px;
+}
+.nav-panel .nav-panel-secondary ul a {
+  transition: 0.2s;
+  padding: 6px 12px;
+}
+.nav-panel .nav-panel-secondary ul a:hover {
+  border-radius: 10px;
+  background-color: #595b61;
+}
+.nav-panel .nav-panel-secondary ul .current {
+  border-radius: 10px;
+  background-color: #595b61;
+}
+
+.nav-container {
+  width: 100%;
+  max-width: 1328px;
+  box-sizing: border-box;
 }
 
 .nav-search {
@@ -234,6 +255,17 @@ a {
   flex-direction: column;
   flex-wrap: wrap;
 }
+.flex-wrapper .full-item {
+  width: 100%;
+}
+.flex-wrapper .item-align-end {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+.flex-wrapper.lg-reverse-order {
+  flex-direction: row;
+}
 
 .container {
   width: 100%;
@@ -243,7 +275,15 @@ a {
   box-sizing: border-box;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .input-control {
+  width: 100%;
+}
+
+.fit-parent {
   width: 100%;
 }
 
@@ -292,6 +332,21 @@ a {
   transform: translate(-50%, -50%);
 }
 
+.rounded-link-btn {
+  padding: 4px 24px;
+  border: solid 6px;
+  border-radius: 25px;
+  font-weight: 500;
+}
+.rounded-link-btn.rlb-primary {
+  color: #2c2e35;
+  border-color: #2c2e35;
+}
+.rounded-link-btn.rlb-secondary {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
 .negative-btn {
   color: white;
   background-color: #dd224b;
@@ -310,6 +365,20 @@ a {
 }
 .negative-btn:focus {
   outline: none !important;
+}
+
+.intro-container {
+  padding: 24px;
+}
+
+.quote-box {
+  max-width: 490px;
+  box-sizing: border-box;
+  padding: 28px 36px;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 64px auto;
+  background-color: rgba(255, 173, 71, 0.64);
 }
 
 @media (min-width: 576px) {
@@ -340,6 +409,9 @@ a {
   }
   .flex-wrapper .flex-item-3 {
     flex: 33.33%;
+  }
+  .flex-wrapper.lg-reverse-order {
+    flex-direction: row-reverse;
   }
   .special-icon {
     display: none;
