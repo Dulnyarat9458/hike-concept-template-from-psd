@@ -28,7 +28,7 @@ window.addEventListener('scroll', function () {
 
 const closeSidebar = () => {
     document.getElementById("sidebar").style.width = "0px";
-    document.getElementById("search-bar").style.display = "none";
+    document.getElementById("search-bar").style.height = "0px";
     document.getElementById("backdrop-panel").style.display = "none";
 }
 
