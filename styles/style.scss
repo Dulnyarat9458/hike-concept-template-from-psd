@@ -12,12 +12,21 @@ body {
     font-family: $primary-font;
 }
 
+h1 {
+    font-size: 60px;
+    font-weight: 400;
+}
+
 nav {
     z-index: 20;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+}
+
+p{
+    font-size: 21px;
 }
 
 section {
@@ -118,7 +127,17 @@ a {
     background-color: $accent-color;
     background-repeat: no-repeat;
     background-position: bottom;
-    height: 500px;
+    height: 800px;
+    position: relative;
+
+    .break-into {
+        position: absolute;
+        top: -100px;
+        width: 100%;
+        height: 100%;
+        max-height: 210px;
+        background-image: url("/assets/images/break.png");
+    }
 }
 
 #level-section {
@@ -137,9 +156,10 @@ a {
 }
 
 #journey-section {
+    background-color: $accent-color;
     background-repeat: no-repeat;
     background-position: bottom;
-    height: 600px;
+    height: 550px;
 }
 
 #promotion-section {
@@ -259,6 +279,19 @@ a {
     align-items: center;
 }
 
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.full-high{
+    height: 100%;
+    
+}
+
 .flex-wrapper {
     width: 100%;
     display: flex;
@@ -304,6 +337,26 @@ a {
 
 .box {
     border: 2px solid $accent-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.splash-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background-image: url("../assets/images/splash-box.png");
+    max-width: 786px;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    height: 220px;
+    font-size: 21px;
+    background-position: center;
+    background-size: contain;
 }
 
 .search-input {
@@ -320,11 +373,16 @@ a {
     &.route-search-input {
         color: $secondary-color;
         width: 100%;
-        max-width: 450px;
         &::placeholder {
             color: $secondary-color;
         }
     }
+}
+
+.route-search-container {
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .form-group {
@@ -347,6 +405,7 @@ a {
     border-radius: 25px;
     font-weight: 500;
     &.rlb-primary {
+        border: solid 2px;
         color: $primary-color;
         border-color: $primary-color;
     }
@@ -386,7 +445,30 @@ a {
     padding: 28px 36px;
     height: fit-content;
     margin: 64px auto;
-    background-color: rgba(255, 173, 71, 0.64);
+    background-color: rgba(255, 173, 71, 0.45);
+}
+
+.lvl-card {
+    display: block;
+    margin: auto;
+    max-width: 284px;
+    font-size: 20px;
+}
+
+.lvl-line {
+    background-color: $primary-color;
+    height: 1px;
+    width: 80%;
+}
+
+.search-route {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.route-description{
+    max-width: 470px;
 }
 
 @media (min-width: 576px) {
@@ -430,6 +512,17 @@ a {
 
     .special-icon {
         display: none;
+    }
+
+    .splash-box {
+        font-size: 21px;
+        background-size: contain;
+        padding: 80px 170px 80px 170px;
+    }
+    .route-search-container {
+        max-width: 450px;
+        margin-left: auto;
+        margin-right: 0;
     }
 }
 
