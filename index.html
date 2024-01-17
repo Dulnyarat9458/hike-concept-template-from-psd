@@ -1,310 +1,489 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#161616">
-    <link rel="stylesheet" href="styles/style.css">
-    <title>hike-concept-template</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#161616">
+        <link rel="stylesheet" href="styles/style.css">
+        <title>hike-concept-template</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet">
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    </head>
 
-<body>
-    <nav>
-        <div class="nav-panel" id="nav-panel">
-            <div class="nav-container">
-                <div class="nav-panel-primary" id="nav-panel-primary">
-                    <span onclick="openSidebar()"><img src="assets/images/bar.svg" width="24px" alt="menu"
-                            class="special-icon"></span>
-                    <img src="./assets/images/logo.png" width="220px" alt="logo">
-                    <span onclick="openSearch()"><img src="assets/images/search-primary.svg" width="24px" alt="search"
-                            class="special-icon"></span>
-                </div>
-                <div class="nav-panel-secondary">
-                    <ul>
-                        <li><a href="/" class="secondary-color-font current">Home</a></li>
-                        <li><a href="/" class="secondary-color-font">About</a></li>
-                        <li><a href="/" class="secondary-color-font">Package</a></li>
-                        <li><a href="/" class="secondary-color-font">Contacts</a></li>
-                    </ul>
-                    <div class="nav-search">
-                        <div class="form-group">
-                            <span class="search-icon">
-                                <img src="assets/images/search-accent.svg" alt="search">
-                            </span>
-                            <input type="text" placeholder="Search" class="search-input nav-search-input">
-                        </div>
+    <body>
+        <nav>
+            <div class="nav-panel" id="nav-panel">
+                <div class="nav-container">
+                    <div class="nav-panel-primary" id="nav-panel-primary">
+                        <span onclick="openSidebar()"><img
+                                src="assets/images/bar.svg" width="24px"
+                                alt="menu"
+                                class="special-icon"></span>
+                        <img src="./assets/images/logo.png" width="220px"
+                            alt="logo">
+                        <span onclick="openSearch()"><img
+                                src="assets/images/search-primary.svg"
+                                width="24px" alt="search"
+                                class="special-icon"></span>
                     </div>
-                </div>
-            </div>
-        </div>
-    </nav>
-    <div id="sidebar">
-        <div class="sidebar-panel">
-            <br>
-            <button onclick="closeSidebar()" class="negative-btn rounded-btn">&#x2715</button>
-            <br>
-            <ul>
-                <li><a href="/" class="secondary-color-font">Home</a></li>
-                <li><a href="/" class="secondary-color-font">About</a></li>
-                <li><a href="/" class="secondary-color-font">Package</a></li>
-                <li><a href="/" class="secondary-color-font">Contacts</a></li>
-            </ul>
-        </div>
-    </div>
-    <div id="search-bar">
-        <form action="/">
-            <div class="form-group">
-                <span class="search-icon">
-                    <img src="assets/images/search-accent.svg" alt="search">
-                </span>
-                <input type="text" placeholder="Search" class="search-input nav-search-input">
-            </div>
-            <br><br>
-            <div class="center">
-                <button type="button" onclick="closeSearch()" class="negative-btn rounded-btn">&#x2715</button>
-            </div>
-        </form>
-    </div>
-    <div id="backdrop-panel" onclick="closeSidebar()"></div>
-    <section id="intro-section">
-        <div class="container">
-            <div class="flex-wrapper lg-reverse-order">
-                <div class="flex-item-2">
-                    <div class="intro-container">
-                        <img src="assets/images/big-logo.png" class="text-center fit-parent" alt="big-logo">
-                        <p class="secondary-color-font text-center fit-parent">Lorem
-                            ipsum
-                            dolor sit amet, consectetuer
-                            adipiscing elit, sed diam nonummy nibh
-                            euismod tincidunt ut laoreet dolore </p>
-                        <br><br>
-                        <div class="text-center fit-parent">
-                            <a href="/" class="rounded-link-btn rlb-secondary">Learn
-                                More</a>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="flex-item-2 item-align-end full-item">
-                    <div class="intro-container">
-                        <div class="quote-box text-center secondary-color-font">
-                            <img src="assets/images/star.svg" width="86px" alt="star">
-                            <p>
-                                “ Lorem ipsum dolor sit amet, consectetuer
-                                adipiscing elit, sed diam nonumm
-                                euismod tincidunt ut laoreet dolore magna”
-                            </p>
-                            <span>- quotes -</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="about-section">
-        <div class="break-into"></div>
-        <div class="container">
-            <h1 class="text-center">
-                1000+ Route. 1 Million Hikers.
-                Memorable Memories.
-            </h1>
-            <div class="splash-box secondary-color-font text-center">
-                Lorem ipsum dolor sit amet, consectetuer
-                adipiscing elit, sed diam nonummy nibh
-                euismod tincidunt ut laoreet dolore
-                </p>
-            </div>
-    </section>
-    <section id="level-section">
-        <div class="container">
-            <h2 class="text-center">Choose Your Level</h3>
-                <div class="flex-wrapper">
-                    <div class="flex-item-3">
-                        <div class="lvl-card">Beginner<div class="lvl-line"></div>
-                            <p>Lorem ipsum dolor sit amet,
-                                consectetuer adipiscing elit,
-                                sed diam nonummy nibh
-                                euismod tincidunt ut </p>
-                            <div class="text-center"><a href="/" class="rounded-link-btn rlb-primary">Learn more</a>
-                            </div>
-
-                        </div>
-
-                    </div>
-                    <div class="flex-item-3">
-                        <div class="lvl-card">Experienced <div class="lvl-line"></div>
-                            <p>Lorem ipsum dolor sit amet,
-                                consectetuer adipiscing elit,
-                                sed diam nonummy nibh
-                                euismod tincidunt ut </p>
-                            <div class="text-center"><a href="/" class="rounded-link-btn rlb-primary">Learn more</a>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="flex-item-3">
-                        <div class="lvl-card">Expert<div class="lvl-line"></div>
-                            <p>Lorem ipsum dolor sit amet,
-                                consectetuer adipiscing elit,
-                                sed diam nonummy nibh
-                                euismod tincidunt ut </p>
-                            <div class="text-center"><a href="/" class="rounded-link-btn rlb-primary">Learn more</a>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-        </div>
-    </section>
-    <section id="route-section">
-        <div class="container full-high flex-center">
-            <h3 class="text-center">Hiking Route</h3>
-            <div class="box">
-                <div class="flex-wrapper">
-                    <div class="flex-item-3 ">
-                        <div class="route-search-container">
+                    <div class="nav-panel-secondary">
+                        <ul>
+                            <li><a href="/" class="secondary-color-font current">Home</a></li>
+                            <li><a href="/" class="secondary-color-font">About</a></li>
+                            <li><a href="/" class="secondary-color-font">Package</a></li>
+                            <li><a href="/" class="secondary-color-font">Contacts</a></li>
+                        </ul>
+                        <div class="nav-search">
                             <div class="form-group">
                                 <span class="search-icon">
-                                    <img src="assets/images/search-primary.svg" alt="search">
+                                    <img src="assets/images/search-accent.svg"
+                                        alt="search">
                                 </span>
                                 <input type="text" placeholder="Search"
-                                    class="search-input route-search-input accent-color-bg ">
+                                    class="search-input nav-search-input">
                             </div>
                         </div>
                     </div>
-                    <div class="flex-item-3"></div>
                 </div>
             </div>
-            <p class="route-description secondary-color-font">Lorem ipsum dolor sit amet, consectetuer
-                adipiscing elit, sed diam nonumm
-                euismod tincidunt ut laoreet dol</p>
+        </nav>
+        <div id="sidebar">
+            <div class="sidebar-panel">
+                <br>
+                <button onclick="closeSidebar()"
+                    class="negative-btn rounded-btn">&#x2715</button>
+                <br>
+                <ul>
+                    <li><a href="/" class="secondary-color-font">Home</a></li>
+                    <li><a href="/" class="secondary-color-font">About</a></li>
+                    <li><a href="/" class="secondary-color-font">Package</a></li>
+                    <li><a href="/" class="secondary-color-font">Contacts</a></li>
+                </ul>
+            </div>
         </div>
-    </section>
-    <section id="journey-section">
-        <div class="container">
-            <h1 class="text-center">
-                OUR <strong>JOURNEY</strong>
-            </h1>
-            <p class="text-center">
-                Lorem ipsum dolor sit amet, consectetuer
-                adipiscing elit, sed diam nonummy nibh
-                euismod tincidunt ut laoreet dolore
-            </p>
-            <div class="flex-wrapper">
-                <div class="flex-item-3 text-center">
-                    <p><strong>Hiking</strong></p>
+        <div id="search-bar">
+            <form action="/">
+                <div class="form-group">
+                    <span class="search-icon">
+                        <img src="assets/images/search-accent.svg" alt="search">
+                    </span>
+                    <input type="text" placeholder="Search"
+                        class="search-input nav-search-input">
                 </div>
-                <div class="flex-item-3 text-center">
-                    <p><strong>Fun</strong></p>
+                <br><br>
+                <div class="center">
+                    <button type="button" onclick="closeSearch()"
+                        class="negative-btn rounded-btn">&#x2715</button>
                 </div>
-                <div class="flex-item-3 text-center">
-                    <p><strong>Health</strong></p>
-                </div>
-            </div>
+            </form>
         </div>
-    </section>
-    <section id="promotion-section">
-        <div class="container">
-            <h1>Hiking</h1>
-            <div class="flex-wrapper">
-                <div class="flex-item-3">content1</div>
-                <div class="flex-item-3">content2</div>
-                <div class="flex-item-3">content2</div>
-            </div>
-        </div>
-    </section>
-    <section id="video-section">
-        <div class="container">
-            <div class="flex-wrapper">
-                <div class="flex-item-2">content1</div>
-                <div class="flex-item-2">content2</div>
-            </div>
-            <br>
-            <br>
-            <a href>more videos</a>
-        </div>
-    </section>
-    <section id="gallery-section">
-        <div class="container">
-            <h1>gallery</h1>
-            <div class="flex-wrapper">
-                <div class="flex-item-3">content1</div>
-                <div class="flex-item-3">content2</div>
-                <div class="flex-item-3">content2</div>
-                <div class="flex-item-3">content1</div>
-                <div class="flex-item-3">content2</div>
-                <div class="flex-item-3">content2</div>
-                <div class="flex-item-3">content1</div>
-                <div class="flex-item-3">content2</div>
-                <div class="flex-item-3">content2</div>
-            </div>
-            <br>
-            <a href>MORE PHOTOS</a>
-        </div>
-    </section>
-    <section id="contact-section">
-        <div class="container">
-            <img src="assets/images/logo.png" alt="logo" width="200px">
-            <div class="flex-wrapper">
-                <div class="flex-item-2">content1</div>
-                <div class="flex-item-2">content2</div>
-            </div>
-            <br>
-            <br>
-            <a href>more videos</a>
-        </div>
-    </section>
-    <footer>
-        <div class="container">
-            <div class="flex-wrapper">
-                <div class="flex-item-2">
-                    <h5>ABOUT</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetuer
-                        adipiscing elit, sed diam nonummy nibh
-                        euismod tincidunt ut laoreet dolore magna
-                        aliquam erat </p>
-                </div>
-                <div class="flex-item-2">
-                    <div class="flex-wrapper">
-                        <div class="flex-item-3">
-                            <h5>MENU</h5>
-                            <a href>TEAM</a><br>
-                            <a href>JOIN US</a><br>
-                            <a href>CAREER</a><br>
-                            <a href>GOALS</a><br>
+        <div id="backdrop-panel" onclick="closeSidebar()"></div>
+        <section id="intro-section">
+            <div class="container">
+                <div class="flex-wrapper lg-reverse-order">
+                    <div class="flex-item-2">
+                        <div class="intro-container">
+                            <img src="assets/images/big-logo.png"
+                                class="text-center fit-parent" alt="HIKE-MORE">
+                            <h1 class="hide">HIKE MORE</h1>
+                            <p
+                                class="secondary-color-font text-center fit-parent">Lorem
+                                ipsum
+                                dolor sit amet, consectetuer
+                                adipiscing elit, sed diam nonummy nibh
+                                euismod tincidunt ut laoreet dolore </p>
+                            <br><br>
+                            <div class="text-center fit-parent">
+                                <a href="/"
+                                    class="rounded-link-btn rlb-secondary">Learn
+                                    More</a>
+                            </div>
                         </div>
-                        <div class="flex-item-3">
-                            <h5>INFOMATION</h5>
-                            <a href>TEAM</a><br>
-                            <a href>JOIN US</a><br>
-                            <a href>CAREER</a><br>
-                            <a href>GOALS</a><br>
-                        </div>
-                        <div class="flex-item-3">
-                            <h5>LEGAL</h5>
-                            <a href>TEAM</a><br>
-                            <a href>JOIN US</a><br>
-                            <a href>CAREER</a><br>
-                            <a href>GOALS</a><br>
+
+                    </div>
+                    <div class="flex-item-2 item-align-end full-item">
+                        <div class="intro-container">
+                            <div
+                                class="quote-box text-center secondary-color-font">
+                                <img src="assets/images/star.svg" width="86px"
+                                    alt="star">
+                                <p>
+                                    “ Lorem ipsum dolor sit amet, consectetuer
+                                    adipiscing elit, sed diam nonumm
+                                    euismod tincidunt ut laoreet dolore magna”
+                                </p>
+                                <span>- quotes -</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </footer>
-    <script src="scripts/script.js"></script>
-</body>
+        </section>
+        <section id="about-section">
+            <div class="break-into"></div>
+            <div class="container">
+                <h2 class="text-center">
+                    1000+ Route. 1 Million Hikers.
+                    Memorable Memories.
+                </h2>
+                <div class="splash-box secondary-color-font text-center">
+                    Lorem ipsum dolor sit amet, consectetuer
+                    adipiscing elit, sed diam nonummy nibh
+                    euismod tincidunt ut laoreet dolore
+                </p>
+            </div>
+        </section>
+        <section id="level-section">
+            <div class="container">
+                <h3 class="text-center">Choose Your Level</h3>
+                <div class="flex-wrapper">
+                    <div class="flex-item-3">
+                        <div class="lvl-card">
+                            <h4>Beginner</h4>
+                            <div class="lvl-line"></div>
+                            <p>Lorem ipsum dolor sit amet,
+                                consectetuer adipiscing elit,
+                                sed diam nonummy nibh
+                                euismod tincidunt ut </p>
+                            <div class="text-center"><a href="/"
+                                    class="rounded-link-btn rlb-primary">Learn
+                                    more</a>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="flex-item-3">
+                        <div class="lvl-card">
+                            <h4>Experienced</h4>
+                            <div class="lvl-line"></div>
+                            <p>Lorem ipsum dolor sit amet,
+                                consectetuer adipiscing elit,
+                                sed diam nonummy nibh
+                                euismod tincidunt ut </p>
+                            <div class="text-center"><a href="/"
+                                    class="rounded-link-btn rlb-primary">Learn
+                                    more</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="flex-item-3">
+                        <div class="lvl-card">
+                            <h4>Expert</h4>
+                            <div class="lvl-line"></div>
+                            <p>Lorem ipsum dolor sit amet,
+                                consectetuer adipiscing elit,
+                                sed diam nonummy nibh
+                                euismod tincidunt ut </p>
+                            <div class="text-center"><a href="/"
+                                    class="rounded-link-btn rlb-primary">Learn
+                                    more</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="route-section">
+            <div class="container full-high flex-center">
+                <h3 class="text-center">Hiking Route</h3>
+                <div class="box">
+                    <div class="flex-wrapper">
+                        <div class="flex-item-3 ">
+                            <div class="route-search-container">
+                                <div class="form-group">
+                                    <span class="search-icon">
+                                        <img
+                                            src="assets/images/search-primary.svg"
+                                            alt="search">
+                                    </span>
+                                    <input type="text" placeholder="Search"
+                                        class="search-input route-search-input accent-color-bg ">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-item-3"></div>
+                    </div>
+                </div>
+                <p class="route-description text-center secondary-color-font">Lorem
+                    ipsum
+                    dolor sit amet, consectetuer
+                    adipiscing elit, sed diam nonumm
+                    euismod tincidunt ut laoreet dol</p>
+            </div>
+        </section>
+        <section id="journey-section">
+            <div class="container">
+                <h2 class="text-center alternative-head">
+                    OUR <strong>JOURNEY</strong>
+                </h2>
+                <p class="text-center">
+                    Lorem ipsum dolor sit amet, consectetuer
+                    adipiscing elit, sed diam nonummy nibh
+                    euismod tincidunt ut laoreet dolore
+                </p>
+                <div class="flex-wrapper">
+                    <div class="flex-item-3 text-center">
+                        <p><strong>Hiking</strong></p>
+                    </div>
+                    <div class="flex-item-3 text-center">
+                        <p><strong>Fun</strong></p>
+                    </div>
+                    <div class="flex-item-3 text-center">
+                        <p><strong>Health</strong></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="promotion-section">
+            <div class="container">
+                <div class="center">
+                    <img src="assets/images/hiking-logo.png" alt="hiking-logo" class="hiking-logo">
+                </div>
+                <br><br><br><br><br><br><br><br>
+                <div class="flex-wrapper">
+                    <div class="flex-item-3 center">
+                        <div class="route-card">
+                            <h4 class="alternative-head">ROUTE 1</h4>
+                            <img src="assets/images/r_01.webp" alt="route-1">
+                            <div class="discount-tag">20% OFF</div>
+                        </div>
+                    </div>
+                    <div class="flex-item-3 center">
+                        <div class="route-card">
+                            <h4 class="alternative-head">ROUTE 2</h4>
+                            <img src="assets/images/r_02.webp" alt="route-1">
+                            <div class="discount-tag">30% OFF</div>
+                        </div>
+                    </div>
+                    <div class="flex-item-3 center">
+                        <div class="route-card">
+                            <h4 class="alternative-head">ROUTE 3</h4>
+                            <img src="assets/images/r_03.webp" alt="route-1">
+                            <div class="discount-tag">40% OFF</div>
+                        </div>
+                    </div>
+                </div>
+                <br><br><br><br>
+            </div>
+        </section>
+        <section id="video-section">
+            <div class="container">
+                <div class="flex-wrapper  lg-reverse-order">
+                    <div class="flex-item-2 center">
+                        <div class="center">
+                            <h2 class="alternative-head">OUR<br><strong>JOURNEY</strong></h2>
+                        </div>
+                    </div>
+                    <div class="flex-item-2">
+                        <h5 class="more-mb">LOREM IPSUM</h5>
+                        <div class="fake-video">
+                            <img src="assets/images/video-img.webp" alt="vid">
+                            <span><img src="assets/images/play-btn.svg"
+                                    alt="play"></span>
+                        </div>
+                        <p class="text-center">Lorem ipsum dolor sit amet,
+                            consectetuer adipiscing
+                            elit, sed
+                            diam nonummy nibh euismod tincid
+                            magna aliquam erat volutpat. Ut wisi enim ad minim
+                            veniam, </p>
+                    </div>
+                
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="center "><a href class="more-btn">MORE VIDIOES</a></div>
+
+            </div>
+        </section>
+        <section id="gallery-section">
+            <div class="container">
+                <h3 class="text-center">GALLERY</h3>
+                <div class="flex-wrapper">
+                    <div class="flex-item-3 center">
+                        <a href="/">
+                            <img src="assets/images/g_01.webp" alt="g1"
+                                class="gallery-img">
+                        </a>
+                    </div>
+                    <div class="flex-item-3">
+                        <a href="/">
+                            <img src="assets/images/g_02.webp" alt="g2"
+                                class="gallery-img">
+                        </a>
+                    </div>
+                    <div class="flex-item-3">
+                        <a href="/">
+                            <img src="assets/images/g_03.webp" alt="g3"
+                                class="gallery-img">
+                        </a>
+                    </div>
+                    <div class="flex-item-3">
+                        <a href="/">
+                            <img src="assets/images/g_04.webp" alt="g4"
+                                class="gallery-img">
+                        </a>
+                    </div>
+                    <div class="flex-item-3">
+                        <a href="/">
+                            <img src="assets/images/g_05.webp" alt="g5"
+                                class="gallery-img">
+                        </a>
+                    </div>
+                    <div class="flex-item-3">
+                        <a href="/">
+                            <img src="assets/images/g_06.webp" alt="g6"
+                                class="gallery-img">
+                        </a>
+                    </div>
+                    <div class="flex-item-3">
+                        <a href="/">
+                            <img src="assets/images/g_07.webp" alt="g7"
+                                class="gallery-img">
+                        </a>
+                    </div>
+                    <div class="flex-item-3">
+                        <a href="/">
+                            <img src="assets/images/g_08.webp" alt="g8"
+                                class="gallery-img">
+                        </a>
+                    </div>
+                    <div class="flex-item-3">
+                        <a href="/">
+                            <img src="assets/images/g_09.webp" alt="g9"
+                                class="gallery-img">
+                        </a>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="center"><a href class="more-btn secondary-more-btn">MORE
+                        PHOTOS</a></div>
+                <br> <br> <br> <br>
+            </div>
+        </section>
+        <section id="contact-section">
+            <div class="container">
+                <h3>
+                    <div class="center"><img src="assets/images/logo.png"
+                            alt="logo"
+                            width="340px"></div>
+                </h3>
+                <br><br><br>
+                <div class="flex-wrapper">
+                    <div class="flex-item-2 text-contact-adjust">
+                        <p class="contact-text">Lorem ipsum dolor sit amet,
+                            consectetuer adipiscing elit,
+                            sed diam nonummy nibh
+                            euismod tincid </p>
+                    </div>
+                    <div class="flex-item-2 contact-adjust">
+                        <div class="contact-panel">
+                            <h5>find us here</h5>
+                            <div class="flex-wrapper indent">
+                                <div class="flex-item-2">
+                                    <a href="#" class="social-media">
+                                        <img
+                                            src="assets/images/facebook.svg"
+                                            alt="facebook"
+                                            width="36px">
+                                        <span>your_account</span>
+                                    </a>
+                                </div>
+                                <div class="flex-item-2">
+                                    <a href="#" class="social-media">
+                                        <img
+                                            src="assets/images/instagram.svg"
+                                            alt="instagram"
+                                            width="36px">
+                                        <span>your_account</span>
+                                    </a>
+                                </div>
+                                <div class="flex-item-2">
+                                    <a href="#" class="social-media">
+                                        <img
+                                            src="assets/images/youtube.svg"
+                                            alt="youtube"
+                                            width="36px">
+                                        <span>your_account</span>
+                                    </a>
+                                </div>
+                                <div class="flex-item-2">
+                                    <a href="#" class="social-media">
+                                        <img
+                                            src="assets/images/twitter.svg"
+                                            alt="twitter"
+                                            width="36px">
+                                        <span>your_account</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <br>
+                            <h5>message us here</h5>
+                            <div class="indent contact-email">your@email.com</div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+            </div>
+        </section>
+        <footer>
+            <div class="container">
+                <div class="flex-wrapper">
+                    <div class="flex-item-2">
+                        <h6 class="about-title">ABOUT</h6>
+                        <p class="about-text">Lorem ipsum dolor sit amet,
+                            consectetuer
+                            adipiscing elit, sed diam nonummy nibh
+                            euismod tincidunt ut laoreet dolore magna
+                            aliquam erat </p>
+                    </div>
+                    <div class="flex-item-2">
+                        <div class="flex-wrapper">
+                            <div class="flex-item-3 text-center">
+                                <h6>MENU</h6>
+                                <a href>TEAM</a><br>
+                                <a href>JOIN US</a><br>
+                                <a href>CAREER</a><br>
+                                <a href>GOALS</a><br>
+                            </div>
+                            <div class="flex-item-3 text-center">
+                                <h6>INFOMATION</h6>
+                                <a href>TEAM</a><br>
+                                <a href>JOIN US</a><br>
+                                <a href>CAREER</a><br>
+                                <a href>GOALS</a><br>
+                            </div>
+                            <div class="flex-item-3 text-center">
+                                <h6>LEGAL</h6>
+                                <a href>TEAM</a><br>
+                                <a href>JOIN US</a><br>
+                                <a href>CAREER</a><br>
+                                <a href>GOALS</a><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="scripts/script.js"></script>
+    </body>
 
 </html>

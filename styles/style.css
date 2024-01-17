@@ -3,9 +3,48 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-h1 {
+h2 {
   font-size: 60px;
   font-weight: 400;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 38px;
+}
+
+h4 {
+  margin: 0 0 24px 0;
+  font-size: 42px;
+  font-weight: 300;
+}
+h4.alternative-head {
+  font-size: 38px;
+  font-weight: 700;
+  white-space: nowrap;
+  padding: 6px 16px;
+  color: #2c2e35;
+  background-color: #ffae47;
+  position: absolute;
+  top: -6%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+h5 {
+  font-size: 30px;
+  font-weight: 300;
+  margin: 0 0 24px 0;
+}
+h5.more-mb {
+  margin-bottom: 64px;
+}
+
+h6 {
+  font-size: 25px;
+  font-weight: 700;
+  color: #2c2e35;
+  margin-bottom: 16px;
 }
 
 nav {
@@ -33,6 +72,21 @@ footer {
   justify-content: center;
   align-items: center;
   min-height: 385px;
+}
+footer .about-title {
+  text-align: center;
+}
+footer .about-text {
+  display: block;
+  margin: auto;
+  text-align: center;
+  max-width: 480px;
+  width: 100%;
+}
+footer a {
+  text-decoration: none;
+  color: #2c2e35;
+  font-size: 25px;
 }
 
 input {
@@ -111,6 +165,7 @@ a {
   background-image: url("../assets/images/sc_bg_01.webp");
   background-repeat: no-repeat;
   background-position: top;
+  padding-top: 36px;
   height: 1010px;
 }
 
@@ -133,9 +188,10 @@ a {
 #level-section {
   background-image: url("../assets/images/sc_bg_02.webp");
   background-repeat: no-repeat;
-  background-position: bottom;
-  height: 1020px;
+  background-position: top;
+  height: 1080px;
   justify-content: start;
+  padding: 24px 0;
 }
 
 #route-section {
@@ -149,35 +205,44 @@ a {
   background-color: #ffae47;
   background-repeat: no-repeat;
   background-position: bottom;
-  height: 550px;
+  padding-top: 24px;
+  padding-bottom: 56px;
 }
 
 #promotion-section {
   background-image: url("../assets/images/sc_bg_04.webp");
   background-repeat: no-repeat;
   background-position: bottom;
-  height: 900px;
+  padding: 100px 0 50px 0;
 }
 
 #video-section {
   background-image: url("../assets/images/sc_bg_05.webp");
   background-repeat: no-repeat;
   background-position: bottom;
-  height: 800px;
+  padding: 130px 0px;
 }
 
 #gallery-section {
   background-image: url("../assets/images/sc_bg_06.webp");
   background-repeat: no-repeat;
   background-position: bottom;
-  height: 900px;
+  padding: 60px 0;
+}
+#gallery-section .flex-wrapper {
+  gap: 80px;
+}
+#gallery-section .flex-wrapper .flex-item-3 {
+  flex: calc(33.33% - 80px);
 }
 
 #contact-section {
   background-color: #2c2e35;
   background-repeat: no-repeat;
   background-position: bottom;
-  height: 900px;
+  padding-top: 60px;
+  padding-bottom: 90px;
+  color: #ffffff;
 }
 
 .nav-panel {
@@ -266,6 +331,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: auto;
 }
 
 .flex-center {
@@ -305,6 +371,10 @@ a {
   box-sizing: border-box;
 }
 
+.hide {
+  display: none;
+}
+
 .text-center {
   text-align: center;
 }
@@ -340,7 +410,8 @@ a {
   box-sizing: border-box;
   background-repeat: no-repeat;
   height: 220px;
-  font-size: 21px;
+  font-size: 1rem;
+  padding: 12px 46px 12px 46px;
   background-position: center;
   background-size: contain;
 }
@@ -359,9 +430,6 @@ a {
 .search-input.route-search-input {
   color: #ffffff;
   width: 100%;
-}
-.search-input.route-search-input::-moz-placeholder {
-  color: #ffffff;
 }
 .search-input.route-search-input::placeholder {
   color: #ffffff;
@@ -394,18 +462,30 @@ a {
   font-weight: 500;
 }
 .rounded-link-btn.rlb-primary {
-  border: solid 2px;
+  border: #808180 solid 2px;
+  padding: 4px 30px;
   color: #2c2e35;
-  border-color: #2c2e35;
 }
 .rounded-link-btn.rlb-secondary {
   color: #ffffff;
   border-color: #ffffff;
 }
 
+.more-btn {
+  display: block;
+  width: fit-content;
+  background-color: #ffae47;
+  padding: 6px 24px;
+  color: #2c2e35 !important;
+}
+.more-btn.secondary-more-btn {
+  color: #2c2e35;
+  background-color: #ffffff;
+}
+
 .negative-btn {
   color: white;
-  background-color: #dd224b;
+  background-color: #ff2e17;
   border: 0;
   outline: 0;
   padding: 8px 16px;
@@ -431,7 +511,6 @@ a {
   max-width: 490px;
   box-sizing: border-box;
   padding: 28px 36px;
-  height: -moz-fit-content;
   height: fit-content;
   margin: 64px auto;
   background-color: rgba(255, 173, 71, 0.45);
@@ -457,7 +536,109 @@ a {
 }
 
 .route-description {
+  font-weight: 500;
   max-width: 470px;
+  padding: 76px 0;
+}
+
+.route-card {
+  position: relative;
+  border: #ffffff 4px solid;
+  padding: 6px;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 35px;
+  margin-bottom: 64px;
+}
+.route-card img {
+  border-radius: 30px;
+  width: 100%;
+}
+.route-card .discount-tag {
+  color: #ffffff;
+  background-color: #ff2e17;
+  width: fit-content;
+  padding: 6px 12px;
+  position: absolute;
+  bottom: -7%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.fake-video {
+  position: relative;
+  width: 100%;
+}
+.fake-video img {
+  width: 100%;
+}
+.fake-video span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.fake-video span img {
+  width: 40px;
+}
+
+.gallery-img {
+  width: 100%;
+}
+
+.contact-text {
+  max-width: 430px;
+  width: 100%;
+  font-size: 30px;
+  line-height: 2;
+  font-weight: 300;
+}
+
+.social-media {
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 150px;
+  margin-bottom: 16px;
+}
+.social-media span {
+  font-weight: 500;
+  font-size: 14px;
+}
+.social-media img {
+  aspect-ratio: 1/1;
+}
+
+.text-contact-adjust {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-adjust {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-panel {
+  max-width: 340px;
+}
+
+.indent {
+  margin-left: 20px;
+}
+
+.contact-email {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.hiking-logo {
+  max-width: 435px;
+  width: 100%;
 }
 
 @media (min-width: 576px) {
@@ -476,6 +657,20 @@ a {
   }
   nav .nav-panel .nav-panel-secondary {
     display: flex;
+  }
+  footer .flex-item-3 {
+    flex: calc(33.33% - 30px) !important;
+  }
+  footer .about-title {
+    text-align: start;
+    margin-left: 0;
+  }
+  footer .about-text {
+    margin-left: 0;
+    text-align: start;
+  }
+  #intro-section {
+    padding-top: 0;
   }
   .container {
     max-width: 960px;
@@ -505,9 +700,17 @@ a {
     margin-left: auto;
     margin-right: 0;
   }
+  .contact-adjust {
+    display: flex;
+    justify-content: end;
+    margin-right: 0;
+  }
+  .text-contact-adjust {
+    justify-content: start;
+  }
 }
 @media (min-width: 1200px) {
   .container {
     max-width: 1140px;
   }
-}/*# sourceMappingURL=style.css.map */
+}

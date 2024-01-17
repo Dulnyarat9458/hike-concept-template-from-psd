@@ -3,13 +3,14 @@ accentSecondaryColor = "#ff2e17";
 primaryColor = "#2c2e35";
 secondaryColor = "#ffffff";
 tertiaryColor = "#e0e0e0";
+navColor = "#202121";
 
 window.addEventListener('scroll', function () {
     const scrollX = window.scrollY || document.documentElement.scrollTop;
     const screenWidth = window.innerWidth;
 
     if (scrollX > 100 && screenWidth >= 992) {
-        document.getElementById("nav-panel").style.backgroundColor = primaryColor;
+        document.getElementById("nav-panel").style.backgroundColor = navColor;
         if (scrollX > 300) {
             document.getElementById("nav-panel-primary").style.height = "0px";
         } else {
@@ -17,7 +18,7 @@ window.addEventListener('scroll', function () {
         }
     }
     else if (scrollX > 100 && screenWidth < 992) {
-        document.getElementById("nav-panel").style.backgroundColor = primaryColor;
+        document.getElementById("nav-panel").style.backgroundColor = navColor;
     } else {
         document.getElementById("nav-panel").style.backgroundColor = "transparent";
         document.getElementById("nav-panel-primary").style.backgroundColor = "transparent";
