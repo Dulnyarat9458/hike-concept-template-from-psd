@@ -541,8 +541,10 @@ a {
   padding: 28px 36px;
   height: fit-content;
   margin: 64px auto;
-  font-size: 18px;
-  background-color: rgba(255, 173, 71, 0.45);
+  background-color: rgba(181, 117, 38, 0.4);
+}
+.quote-box .quote-box-text {
+  font-size: 18px !important;
 }
 .quote-box span {
   font-weight: 500;
