@@ -503,15 +503,24 @@ a {
   border: solid 6px;
   border-radius: 25px;
   font-weight: 500;
+  transition: 0.3s;
 }
 .rounded-link-btn.rlb-primary {
   border: #2c2e35 solid 2px;
   padding: 4px 30px;
   color: #2c2e35;
 }
+.rounded-link-btn.rlb-primary:hover {
+  background-color: #2c2e35;
+  color: #ffffff;
+}
 .rounded-link-btn.rlb-secondary {
   color: #ffffff;
   border-color: #ffffff;
+}
+.rounded-link-btn.rlb-secondary:hover {
+  background-color: #ffffff;
+  color: #2c2e35;
 }
 
 .more-btn {
@@ -522,10 +531,14 @@ a {
   color: #2c2e35 !important;
   font-size: 22px;
   margin: 8px auto;
+  transition: 0.3s;
 }
 .more-btn.secondary-more-btn {
   color: #2c2e35;
   background-color: #ffffff;
+}
+.more-btn:hover {
+  filter: brightness(0.8);
 }
 
 .negative-btn {
